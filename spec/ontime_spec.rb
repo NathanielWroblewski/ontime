@@ -167,5 +167,6 @@ describe On, '.in(timezone)' do
   it 'sets timezone' do
     On.February(16.th, 2009).at('2:30').pm.in('UTC').offset == '+00:00'
     On.February(16.th, 2009).at('2:30').pm.in('US/Pacific').offset == '-06:00'
+    On.February(16.th, 2009).at('2:30').pm.in('US/Central').offset == '-05:00'
   end
 end

@@ -38,6 +38,17 @@ On.the(7.th).at(:midnight)
 On.September(19.th).at(:midday).in('UTC')
 ```
 
+General Patterns
+---
+
+```
+On.Month(date, year).at(hour:minutes).and(seconds).am/pm.in(timezone)
+On.the(date).of(month, year).at(hour:minutes).and(seconds).am/pm.in(timezone)
+```
+
+Additional Getters
+---
+
 Method   | Description
 ---------|----------
 `to_time`| Converts the resulting `OnTime` object to a native ruby `Time` object
@@ -47,7 +58,12 @@ Method   | Description
 `hour`   | Returns the hour as an integer (0-23)
 `min`    | Returns the minutes as an integer (0-59)
 `sec`    | Returns the seconds as an integer (0-60)
-`offset` | Returns the timezone offset as a string (+/-HHMM, ex. -0600)
+`offset` | Returns the timezone offset as a string (+/-HH:MM, ex. -06:00)
+
+A Warning About Timezones
+---
+The implementation for timezone offset lookup depends on the UNIX utility
+`zdump`, and is not a super-robust implementation.
 
 Contributing
 ---
