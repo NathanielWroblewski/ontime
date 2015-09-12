@@ -42,8 +42,8 @@ General Patterns
 ---
 
 ```
-On.Month(date, year).at(hour:minutes).and(seconds).am/pm.in(timezone)
-On.the(date).of(month, year).at(hour:minutes).and(seconds).am/pm.in(timezone)
+On.Month(date, year).at(hour:minutes).am/pm.and(seconds).in(timezone)
+On.the(date).of(month, year).at(hour:minutes).am/pm.and(seconds).in(timezone)
 ```
 
 Additional Getters
